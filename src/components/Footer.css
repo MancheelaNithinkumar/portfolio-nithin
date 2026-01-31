@@ -1,0 +1,17 @@
+.footer {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer .heart {
+  color: #FEFEE3;
+  animation: heartbeat 1.5s infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
