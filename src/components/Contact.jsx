@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa'
+import emailjs from '@emailjs/browser'
 import './Contact.css'
 
 const Contact = () => {
@@ -10,6 +11,13 @@ const Contact = () => {
     message: ''
   })
 
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init('YOUR_PUBLIC_KEY_HERE')
+  }, [])
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -19,14 +27,32 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Add your form submission logic here
-    alert('Thank you for your message! I will get back to you soon.')
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    })
+    setLoading(true)
+
+    const templateParams = {
+      to_email: 'nithinmancheela@gmail.com',
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message
+    }
+
+    emailjs.send('YOUR_SERVICE_ID_HERE', 'YOUR_TEMPLATE_ID_HERE', templateParams)
+      .then((response) => {
+        alert('Thank you for your message! I will get back to you soon.')
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        })
+        setLoading(false)
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error)
+        alert('Failed to send message. Please try again.')
+        setLoading(false)
+      })
   }
 
   return (
@@ -113,8 +139,8 @@ const Contact = () => {
                 required
               />
             </div>
-            <button type="submit" className="btn btn-primary">
-              <FaPaperPlane /> Send Message
+            <button type="submit" className="btn btn-primary" disabled={loading}>
+              <FaPaperPlane /> {loading ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
