@@ -2,6 +2,7 @@
   background: var(--bg-light);
   position: relative;
   overflow: hidden;
+  padding: 60px 0;
 }
 
 .projects::before {
@@ -37,6 +38,27 @@
   50% {
     transform: translate(50px, -50px) scale(1.1);
   }
+}
+
+.projects-empty {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 1;
+}
+
+.projects-empty h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.projects-empty p {
+  font-size: 1.1rem;
+  color: var(--light-text);
 }
 
 .projects-grid {
