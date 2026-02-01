@@ -3,18 +3,18 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --primary-color: #00f5a0;
-  --secondary-color: #00c2ff;
-  --accent-color: #a855f7;
-  --accent-light: rgba(0, 194, 255, 0.14);
+  --primary-color: #48CAE4;
+  --secondary-color: #0077B6;
+  --accent-color: #0096C7;
+  --accent-light: rgba(72, 202, 228, 0.14);
   --text-color: #e2e8f0;
-  --light-text: #94a3b8;
-  --bg-color: #05060f;
-  --bg-light: #0b1021;
-  --card-color: #0f172a;
-  --border-color: #1f2937;
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
-  --glow: 0 16px 40px rgba(0, 194, 255, 0.35);
+  --light-text: #90E0EF;
+  --bg-color: #03045E;
+  --bg-light: #023E8A;
+  --card-color: #0077B6;
+  --border-color: #0096C7;
+  --shadow: 0 20px 60px rgba(3, 4, 94, 0.55);
+  --glow: 0 16px 40px rgba(72, 202, 228, 0.35);
   --transition: all 0.35s ease;
 }
 
@@ -23,9 +23,9 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif;
   background:
-    radial-gradient(circle at 18% 20%, rgba(0,194,255,0.12), transparent 32%),
-    radial-gradient(circle at 82% -5%, rgba(168,85,247,0.12), transparent 30%),
-    radial-gradient(circle at 50% 90%, rgba(0,245,160,0.10), transparent 32%),
+    radial-gradient(circle at 18% 20%, rgba(0,150,199,0.12), transparent 32%),
+    radial-gradient(circle at 82% -5%, rgba(0,119,182,0.12), transparent 30%),
+    radial-gradient(circle at 50% 90%, rgba(72,202,228,0.10), transparent 32%),
     var(--bg-color);
   color: var(--text-color);
   line-height: 1.7;

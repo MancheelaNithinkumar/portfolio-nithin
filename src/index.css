@@ -5,15 +5,15 @@
 }
 
 :root {
-  --primary-color: #4C956C;
-  --secondary-color: #2C6E49;
-  --accent-color: #4C956C;
-  --accent-light: #FEFEE3;
-  --text-color: #2C6E49;
-  --light-text: #4C956C;
+  --primary-color: #0077B6;
+  --secondary-color: #023E8A;
+  --accent-color: #0096C7;
+  --accent-light: #CAF0F8;
+  --text-color: #03045E;
+  --light-text: #0077B6;
   --bg-color: #ffffff;
-  --bg-light: #FEFEE3;
-  --shadow: 0 10px 30px rgba(44, 110, 73, 0.2);
+  --bg-light: #CAF0F8;
+  --shadow: 0 10px 30px rgba(0, 119, 182, 0.2);
   --transition: all 0.3s ease;
 }
 
